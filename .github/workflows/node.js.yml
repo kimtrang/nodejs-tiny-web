@@ -29,3 +29,10 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     #- run: npm test
+  greeting:
+    uses: kimtrang/workflow-poc/.github/workflows/1.yml@main
+    with:
+      APP_NAME: kim-test-app
+    # secrets:
+    #   APP_SECRET: ${{ secrets.APP_SECRET }}
+    secrets: inherit
